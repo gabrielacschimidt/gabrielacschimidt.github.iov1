@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 10, sass/_variables.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 15, sass/_variables.scss */
+h1, h2, h3, h4, h5 {
+  font-family: "Slabo 27px", serif;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.svg?70768193#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 26, sass/_variables.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 58, sass/_variables.scss */
+.icon-download:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 59, sass/_variables.scss */
+.icon-mail:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 60, sass/_variables.scss */
+.icon-emo-coffee:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 61, sass/_variables.scss */
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+/* '' */
+/* line 62, sass/_variables.scss */
+.icon-linkedin:before {
+  content: '\f318';
+}
+
+/* '' */
+/* line 1, sass/_styles.scss */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #595257;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, sass/_styles.scss */
+header {
+  padding: 20px;
+  display: table;
+  width: 100%;
+  background: #f0f0f0;
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 14, sass/_styles.scss */
+header h2 {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 18, sass/_styles.scss */
+header nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 21, sass/_styles.scss */
+header nav a {
+  margin: 0 20px;
+  display: inline;
+}
+
+/* line 29, sass/_styles.scss */
+.basic-block {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f2ddca;
+}
+
+/* line 34, sass/_styles.scss */
+#intro {
+  background-color: #ecf0e1;
+}
+/* line 37, sass/_styles.scss */
+#intro img {
+  display: table;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* line 46, sass/_styles.scss */
+#study {
+  background-color: #dc935e;
+}
+/* line 53, sass/_styles.scss */
+#study .content-blocks li span {
+  display: block;
+  position: relative;
+  clear: both;
+}
+
+/* line 61, sass/_styles.scss */
+#work {
+  background-color: #d2eaec;
+}
+
+/* line 65, sass/_styles.scss */
+#mapa iframe {
+  width: 100%;
+}
+
+/* line 70, sass/_styles.scss */
+.content-blocks {
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 73, sass/_styles.scss */
+.content-blocks li {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
