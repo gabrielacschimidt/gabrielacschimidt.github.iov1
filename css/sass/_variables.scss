@@ -7,16 +7,8 @@ $text-base: darken($marrom,20%);
 $font-title: 'Slabo 27px', serif;
 $font-primary: 'Source Sans Pro', sans-serif;
 
-a{
-  text-decoration:none;
-  color: inherit;
-}
-
-h1,h2,h3,h4,h5{
-  font-family:$font-title;
-}
-
-// mixin collection based on http://engageinteractive.co.uk/blog/top-10-scss-mixins
+/* MIXINS */
+// mixin collection based on http://engageinteractive.co.uk/blog/top-10-scss-mixins & experience
 
 @mixin push-auto {
     margin: { 
@@ -37,4 +29,151 @@ h1,h2,h3,h4,h5{
     &::-moz-placeholder { @content; }
     &:-ms-input-placeholder { @content; }
     &::-webkit-input-placeholder { @content; }
+}
+
+@mixin border-radius($border-radius) {
+    -moz-border-radius:    $border-radius;
+    -o-border-radius:      $border-radius;
+    -webkit-border-radius: $border-radius;
+    border-radius:         $border-radius;
+}
+
+@mixin box-shadow($box-shadow) {
+    -moz-box-shadow:    $box-shadow;
+    -o-box-shadow:      $box-shadow;
+    -webkit-box-shadow: $box-shadow;
+    box-shadow:         $box-shadow;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+       -o-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+@mixin mobileview{
+  @media only screen and ( max-width: 769px ){
+    @content;
+  }
+}
+
+@mixin desktopview{
+  @media only screen and ( max-width: 769px ){
+    @content;
+  }
+}
+
+/* RESETING AND ENVIRONMENTAL SETTINGS */
+
+a{
+  text-decoration:none;
+  color: inherit;
+}
+
+h1,h2,h3,h4,h5{
+  font-family:$font-title;
+}
+
+.container{
+  max-width: 1300px;
+  width:100%;
+  @include push-auto;
+  @include mobileview{
+    width:90%;
+  }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // font: inherit;
+  // font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
 }
