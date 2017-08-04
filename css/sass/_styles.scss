@@ -52,12 +52,21 @@ header{
   padding:40px 0;
   text-align:center;
   background-color: $bege;
+
+  h2{
+    margin: 20px 0;
+  }
 }
 #intro{
   background-color: $verde;
 
   h1{
     margin: 20px 0;
+  }
+  span{
+    max-width: 500px;
+    display: table;
+    @include push-auto();
   }
 
   img{
@@ -78,7 +87,6 @@ header{
     position: relative;
     li{
       margin: 0 40px;
-      @include transition(0.3s ease);
       img{
         width:256px;
         height:256px; 
@@ -102,6 +110,7 @@ header{
         box-shadow: 160px 0 40px rgba(193, 92, 18, 0.35);
         @include transition(0.5s ease);
         opacity: 0;
+        z-index: 0;
       }
 
       &:first-child:after{
@@ -110,8 +119,8 @@ header{
       }
 
       &:nth-child(3):after{
-        right: 25%;
-        top: -20%;
+        right: 17%;
+        top: -22%;
       }
 
       &.active{
@@ -146,12 +155,13 @@ header{
       font-family: $font-title;
       text-shadow: 1px 0 2px #f9b98a;
       opacity: 0;
+      width:100px;
       @include transition(all 1s);
     }
 
     #hidden-columbia{
-      bottom: 20%;
-      left: 40%;
+      bottom: 11%;
+      left: 43%;
       
     }
 
@@ -161,9 +171,30 @@ header{
 
   }
 }
+
+#learned{
+  small{
+    font-size:8px;
+    position: absolute;
+    top:2px;
+    left: 2px;
+    @include rotate(-10);
+  }
+  li{
+    margin: 0 10px;
+    &:hover{
+      // bottom: 7px;
+      @include transform(translateY(-7px));
+      @include transition(0.3s ease);
+      position: relative;
+    }
+  }
+}
+
 #work{
   background-color: $azul;
 }
+
 #mapa{
   iframe{
     width: 100%;
@@ -176,8 +207,16 @@ header{
   li{
     display:inline-block;
     vertical-align:middle;
-    background-color: #f0f0f0;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
-    padding:10px;
+    @include transition(0.3s ease);
+    div{
+      background-color: #f0f0f0;
+      padding:10px;
+      z-index: 1;
+      position: relative;
+    }
+    &:hover{
+      @include box-shadow(0 7px 12px 0px rgba(0,0,0,0.2));
+    }
   }
 }
