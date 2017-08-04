@@ -7,18 +7,6 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "20fc52f9a88bb7bda023ef209acac095",
-      "css": "graduation-cap",
-      "code": 61853,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "48cc210e59ff4bc56b6c8fba6eb384b8",
-      "css": "emo-coffee",
-      "code": 59400,
-      "src": "fontelico"
-    },
-    {
       "uid": "e9107949dd6c9e8ab2b29ae07156e38c",
       "css": "linkedin",
       "code": 61665,
@@ -34,18 +22,6 @@
       "uid": "38575a803c4da31ce20d77e1e1236bcb",
       "css": "paper-plane",
       "code": 61912,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "5ccf1ed249fd9d723ec1ce8629a9f507",
-      "css": "suitcase",
-      "code": 61682,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "fa9a0b7e788c2d78e24cef1de6b70e80",
-      "css": "brush",
-      "code": 61948,
       "src": "fontawesome"
     },
     {
@@ -98,9 +74,41 @@
     },
     {
       "uid": "4b7f817f780705a5d267ad59e855da91",
-      "css": "graduation-cap-1",
+      "css": "graduation-cap",
       "code": 59394,
       "src": "linecons"
+    },
+    {
+      "uid": "13289e807e02b1d46f2fe10d81d6fba6",
+      "css": "location-outline",
+      "code": 59395,
+      "src": "typicons"
+    },
+    {
+      "uid": "3e674995cacc2b09692c096ea7eb6165",
+      "css": "megaphone",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2e6301ac94d0d51566727b9199259451",
+      "css": "id-card-o",
+      "code": 62147,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "34e2542cde8030532f0286ffe2e23f74",
+      "css": "suitcase",
+      "code": 59399,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M958.3 166.7H791.7V41.7C791.7 16.7 775 0 750 0H250C225 0 208.3 16.7 208.3 41.7V166.7H41.7C16.7 166.7 0 183.3 0 208.3V958.3C0 983.3 16.7 1000 41.7 1000H958.3C983.3 1000 1000 983.3 1000 958.3V208.3C1000 183.3 983.3 166.7 958.3 166.7ZM291.7 83.3H708.3V166.7H291.7V83.3ZM500 625C483.3 625 470.8 629.2 458.3 637.5V250H541.7V637.5C529.2 629.2 516.7 625 500 625ZM541.7 708.3C541.7 733.3 525 750 500 750S458.3 733.3 458.3 708.3 475 666.7 500 666.7 541.7 683.3 541.7 708.3ZM83.3 250H416.7V583.3H83.3V250ZM916.7 916.7H83.3V625H416.7V708.3C416.7 754.2 454.2 791.7 500 791.7S583.3 754.2 583.3 708.3V625H916.7V916.7ZM916.7 583.3H583.3V250H916.7V583.3Z",
+        "width": 1000
+      },
+      "search": [
+        "if_office-08_809621"
+      ]
     }
   ]
 }
