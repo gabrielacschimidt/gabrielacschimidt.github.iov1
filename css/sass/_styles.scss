@@ -79,18 +79,25 @@ header{
   }
 }
 #study{
-  h2{
-    margin: 0 0 100px 0;
-  }
   background-color: $laranja;
+  overflow: hidden;
   .content-blocks{
+    padding-top: 50px;
     position: relative;
+    @include desktopview{
+      padding-top:100px;
+    }
+
     li{
       margin: 0 40px;
       img{
         width:256px;
         height:256px; 
         object-fit: cover;
+        @include mobileview{
+          width:200px;
+          height: 200px;
+        }
       }
       span{
         display:block;
@@ -99,18 +106,20 @@ header{
         padding:10px 0 5px;
       }
 
-      &:after{
-        content:'';
-        display: block;
-        position: absolute;
-        height: 150px;
-        width: 150px;
-        background: transparent;
-        border-radius: 50%;
-        box-shadow: 160px 0 40px rgba(193, 92, 18, 0.35);
-        @include transition(0.5s ease);
-        opacity: 0;
-        z-index: 0;
+      @include desktopview{
+        &:after{
+          content:'';
+          display: block;
+          position: absolute;
+          height: 150px;
+          width: 150px;
+          background: transparent;
+          border-radius: 50%;
+          box-shadow: 160px 0 40px rgba(193, 92, 18, 0.35);
+          @include transition(0.5s ease);
+          opacity: 0;
+          z-index: 0;
+        }
       }
 
       &:first-child:after{
@@ -124,8 +133,12 @@ header{
       }
 
       &.active{
-        @include transform(rotate(30deg));
-        @include transform-origin(top right);
+        @include transform(rotate(10deg));
+        
+        @include desktopview{
+          @include transform(rotate(30deg));
+          @include transform-origin(top right);  
+        }
         &~li{
           @include translate(50%,0);
         }
@@ -140,29 +153,29 @@ header{
 
       &:nth-child(3).active{
         @include transform(rotate(-10deg));
-        @include transform-origin(top right);
-        &~li{
-          @include translate(50%,0);
-        }
-        &+.hidden-info{
-          opacity: 1;
-        }
       }
     }
     .hidden-info{
-      position: absolute;
-      @include translate(-50%,-50%);
       font-family: $font-title;
       text-shadow: 1px 0 2px #f9b98a;
       opacity: 0;
-      width:100px;
-      @include transition(all 1s);
-    }
-
-    #hidden-columbia{
-      bottom: 11%;
-      left: 43%;
       
+      @include transition(all 1s);
+      @include desktopview{
+        @include translate(-50%,-50%);
+        position: absolute;
+        width:100px;
+      }
+      @include mobileview{
+        margin:50px 0;
+        display: block;
+      }
+    }
+    @include desktopview{
+      #hidden-columbia{
+        bottom: 11%;
+        left: 43%;      
+      }
     }
 
     #hidden-unifil{
@@ -188,6 +201,9 @@ header{
       @include transition(0.3s ease);
       position: relative;
     }
+    @include mobileview{
+      margin:10px;
+    }
   }
 }
 
@@ -203,7 +219,7 @@ header{
 
 .content-blocks{
   text-align:center;
-  margin:0 auto;
+  @include push-auto();
   li{
     display:inline-block;
     vertical-align:middle;

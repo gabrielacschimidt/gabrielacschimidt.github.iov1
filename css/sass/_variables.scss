@@ -89,7 +89,7 @@ $font-primary: 'Source Sans Pro', sans-serif;
 }
 
 @mixin desktopview{
-  @media only screen and ( max-width: 769px ){
+  @media only screen and ( min-width: 770px ){
     @content;
   }
 }
