@@ -178,8 +178,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-.box{
-  @include desktopview{
-    width:100%;
+button, .button{
+  border:none;
+  cursor:pointer;
+  font-size: 15px;
+  font-family: $font-primary;
+}
+*:focus {
+    outline: none;
+}
+.mobile-box{
+  @include mobileview{
+    width:100% !important;
   }
 }
