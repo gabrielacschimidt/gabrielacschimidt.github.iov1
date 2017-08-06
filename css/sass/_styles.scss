@@ -209,7 +209,9 @@ header{
 }
 
 #work{
-    
+    // background: #f58080;
+    // background: #ccc7ec;
+    // background: #f3f3d3;
 }
 
 #contact{
@@ -301,6 +303,7 @@ header{
                     content: '\f1d9';
                     font-family: "fontello";
                     @include transition(0.1s ease);
+                    text-shadow: 1px 1px 0 #2d7f86;
                 }
                 &:hover{
                     background: lighten(#3099a2,10%);
@@ -341,4 +344,73 @@ footer{
     padding:20px 0;
     text-align: center;
     background: #f0f0f0;
+}
+.floating-icons{
+    z-index: 10;
+    display: table;
+    margin-top: 20px;
+    text-align: center;
+    @include push-auto();
+    @include desktopview{
+        top:50%;
+        right:20px;
+        position: fixed;
+        @include translate(20px,-50%);
+        width:70px;
+        margin:0;
+    }
+    .floating{
+        width:50px;
+        height:50px;
+        display: inline-block;
+        color: #f0f0f0;
+        line-height: 50px;
+        font-size: 22px;
+        background: #3099a2;
+        margin:10px;
+        position: relative;
+        @include border-radius(50%);
+        @include transition(0.3s ease);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+
+        &:before{
+            content:'';
+            width:50px;
+            height:50px;
+            display: inline-block;
+            position: absolute;
+            background: #3099a2;
+            left: 0;
+            top: 0;
+            @include border-radius(50%);
+            z-index: 1;
+        }
+
+        span{
+            color: $text-base;
+            opacity: 0;
+            text-align: right;
+            @include translate(0,0);
+            position: absolute;
+            @include transition(0.3s ease);
+            white-space: nowrap;
+            font-size: 12px;
+            z-index: 0;
+        }
+        i{
+            text-shadow: 1px 1px 0 #2d7f86;
+            position: relative;
+            z-index: 2;
+        }
+
+        &:hover{
+            @include box-shadow(0 7px 12px 0px rgba(0,0,0,0.2));
+            @include desktopview{
+                span{
+                    opacity: 1;
+                    @include translate(-150%,0);
+                }
+            }
+        }
+    }
 }
