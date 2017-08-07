@@ -1,4 +1,4 @@
-$verde:#ecf0e1;
+$verde:#ebf1dc;
 $bege:#f2ddca;
 $laranja:#dc935e;
 $marrom:#8e838b;
@@ -38,11 +38,11 @@ $font-primary: 'Source Sans Pro', sans-serif;
     border-radius:         $border-radius;
 }
 
-@mixin box-shadow($box-shadow) {
-    -moz-box-shadow:    $box-shadow;
-    -o-box-shadow:      $box-shadow;
-    -webkit-box-shadow: $box-shadow;
-    box-shadow:         $box-shadow;
+@mixin box-shadow($args...){
+  -moz-box-shadow:    $args;
+  -o-box-shadow:      $args;
+  -webkit-box-shadow: $args;
+  box-shadow:         $args;
 }
 
 @mixin transition($transition...) {
@@ -191,4 +191,25 @@ button, .button{
   @include mobileview{
     width:100% !important;
   }
+}
+
+::selection{
+  background: #f58080;
+  color: #fff;
+}
+::-moz-selection {
+  background: #f58080;
+  color: #fff;
+}
+::-webkit-selection {
+  background: #f58080;
+  color: #fff;
+}
+::-o-selection {
+  background: #f58080;
+  color: #fff;
+}
+::-ms-selection {
+  background: #f58080;
+  color: #fff;
 }

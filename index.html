@@ -150,7 +150,41 @@
         </div>
 
         <div id='work' class="basic-block">
-            <h2>What I have worked on</h2>
+            <div class="container">
+                <h2>My main projects</h2>
+                
+                <ul class="content-blocks">
+                    <li>
+                        <img src="img/scalon-home.png">
+                        <a href="#" onclick="openInfobox()">Scalon</a>
+                    </li>
+                    <div class="infobox">
+                        <h4>Scalon</h4>
+                        <span>Mockup translation</span>
+                        <p>this is the content for scalon</p>
+                    </div>
+                    <li>
+                        <img src="img/cookie-home.png">
+                        <a href="#" onclick="openInfobox()">Cookie Kids</a>
+                    </li>
+                    <div class="infobox">
+                        <h4>Cookie Kids</h4>
+                        <span>Mockup translation</span>
+                        <p>this is the content for cookie</p>
+                    </div>
+                    <li>
+                        <img src="img/scalon-home.png">
+                        <a href="#" onclick="openInfobox()">Recipy</a>
+                    </li>
+                    <div class="infobox">
+                        <h4>Recipy</h4>
+                        <span>Prototype creation</span>
+                        <p>this is the content for recipy</p>
+                        <p> You can read more about it 
+                        <a href="https://medium.com/@gabrielacschimidt/the-road-to-recipy-what-i-have-learned-on-interaction-design-807aa9fa518a" target="_blank">here</a>.</p>
+                    </div>
+                </ul>
+            </div>
         </div>
 
         <div id="contact">
@@ -181,7 +215,7 @@
                     <div class="floating-icons">
                         <a class="floating linkedin" href="https://www.linkedin.com/in/gabriela-concolin-schimidt-55a54642" target="_blank">
                             <i class="icon-linkedin"></i>
-                            <span>Friend me on LinkedIn</span>
+                            <span>Connect with me on LinkedIn</span>
                         </a>
                         <a class="floating email" href="mailto:gabrielacschimidt@hotmail.com?Subject=Loved%20your%20portfolio%20and%20want%20to%20know%20more!" target="_top"">
                             <i class="icon-doc-text"></i>
@@ -208,26 +242,14 @@
 <script type="text/javascript">
   jQuery(window).ready(function (){
     
-    //header effect
-    // var shrinkHeader = 300;
-    // jQuery(window).scroll(function() {
-    //   var scroll = getCurrentScroll();
-    //     if ( scroll >= shrinkHeader ) {
-    //         jQuery('header').addClass('shrink');
-    //       }
-    //       else {
-    //         jQuery('header').removeClass('shrink');
-    //       }
-    // });
-
     // study effects
     if(getCurrentScroll() > 300){
-      jQuery('.content-blocks li').addClass('active');
+      jQuery('#study .content-blocks li').addClass('active');
     }
 
     jQuery(window).scroll(function(){
       if(getCurrentScroll()>300){
-        jQuery('.content-blocks li').addClass('active');
+        jQuery('#study .content-blocks li').addClass('active');
       }
     });
 
@@ -270,6 +292,11 @@
             jQuery(this).find('label').addClass('active');
         }
     });
+
+    // var myHeader = new Header(address,addresswhite);
+    // myHeader.init();
+    // window.myHeader = myHeader;
+
   });
   function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
