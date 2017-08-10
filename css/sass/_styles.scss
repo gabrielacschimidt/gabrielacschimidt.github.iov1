@@ -214,54 +214,173 @@ header{
     // background: #f58080; //coral
     // background: #ccc7ec; //lilas
     background: #f3f3d3; //amarelo
-    ul{
-        width:100%;
+    h2{
+        margin: 20px 0 40px;
+    }
+    .work{
         display: table;
-        li{
-            margin:20px;
-            width:300px;
-            height: 200px;
-            position: relative;
+        width:100%;
+        max-width:900px;
+        text-align: left;
+        @include push-auto();
+        >div{
+            @include vertically-aligned();
+            @include mobileview{
+                width:100% !important;
+            }
+        }
+        .work-info{
+            width:60%;
+            h4{
+                font-size:24px;
+            }
+            span{
+                font-family: $font-title;
+                text-transform: lowercase;
+                margin-bottom: 20px;
+                display: block;
+            }
+            p{
+                // color: $marrom;
+                @include desktopview{
+                    padding-right: 30px;
+                }
+                line-height: 1.5;
+                a{
+                    color: $coral;
+                }
+            }
+        }
+        .work-img{
+            width:40%;
+            @include vertically-aligned();
+            padding: 30px 0;
+
             img{
-                width:100%;
-                height:100%;
+                @include rotate(5);
+                width:200px;
+                height:auto;
                 object-fit: cover;
+                position: relative;
+                @include box-shadow(0 2px 5px 0 rgba(0,0,0,0.2));
+                @include transition(0.3s ease);
+
                 @include mobileview{
                     width:200px;
                     height: 200px;
                 }
+                &:last-child{
+                    @include rotate(25);
+                    &:hover{
+                        @include transform(rotate(0deg) scale(1.5));
+                    }
+                }
+                .caption{
+                    width:100%;
+                    display: block;
+                    opacity: 0;
+                    visibility: hidden;
+                    height: 0;
+                    clear:both;
+                    background: #f0f0f0;
+                    position: absolute;
+                    bottom: 0;
+                    line-height: 40px;
+                    @include transition(height 0.3s ease, opacity 0.5s ease);
+                }
+                &:hover{
+                    z-index: 1; 
+                    @include transform(rotate(0deg) scale(1.5));
+                    @include box-shadow( 0 0 0 5px #f0f0f0, 0 7px 12px 2px rgba(0,0,0,0.2));
+                    .caption{
+                        max-height: auto;
+                        height: 40px;
+                        opacity: 1;
+                        visibility: visible;
+                        @include transition(height 0.3s ease, opacity 0.5s ease);
+                    }
+                }
             }
-            a{
-                width:100%;
-                display: block;
-                opacity: 0;
-                visibility: hidden;
-                height: 0;
-                clear:both;
-                background: #f0f0f0;
-                position: absolute;
-                bottom: 0;
-                line-height: 40px;
-                @include transition(height 0.3s ease, opacity 0.5s ease);
+        }
+        &:nth-child(2n+1){
+            // making same order on mobile, 
+            // but in a different order on desktop
+            @include desktopview{
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                
+                .work-info{order:2}
+                .work-img{order:1}
+                p{
+                    padding: 0;
+                }
             }
 
-            &:hover{
-                @include transform(scale(1.1));
-                @include box-shadow( 0 0 0 5px #f0f0f0, 0 7px 12px 2px rgba(0,0,0,0.2));
-                a{
-                    max-height: auto;
-                    height: 40px;
-                    opacity: 1;
-                    visibility: visible;
-                    @include transition(height 0.3s ease, opacity 0.5s ease);
+            img{
+                @include rotate(-5);
+                &:last-child{
+                    @include rotate(-25);
                 }
             }
         }
     }
-    .infobox{
-        position: absolute;
-        visibility:hidden;
-    }
+
+    // ul{
+    //     width:100%;
+    //     display: table;
+    //     li{
+    //         margin:20px;
+    //         width:300px;
+    //         height: 200px;
+    //         position: relative;
+    //         img{
+    //             width:100%;
+    //             height:100%;
+    //             object-fit: cover;
+    //             @include mobileview{
+    //                 width:200px;
+    //                 height: 200px;
+    //             }
+    //         }
+    //         a{
+    //             width:100%;
+    //             display: block;
+    //             opacity: 0;
+    //             visibility: hidden;
+    //             height: 0;
+    //             clear:both;
+    //             background: #f0f0f0;
+    //             position: absolute;
+    //             bottom: 0;
+    //             line-height: 40px;
+    //             @include transition(height 0.3s ease, opacity 0.5s ease);
+    //         }
+
+    //         &:hover{
+    //             @include transform(scale(1.1));
+    //             @include box-shadow( 0 0 0 5px #f0f0f0, 0 7px 12px 2px rgba(0,0,0,0.2));
+    //             a{
+    //                 max-height: auto;
+    //                 height: 40px;
+    //                 opacity: 1;
+    //                 visibility: visible;
+    //                 @include transition(height 0.3s ease, opacity 0.5s ease);
+    //             }
+    //         }
+    //     }
+    // }
+    // .infobox{
+    //     position: absolute;
+    //     visibility:hidden;
+    //     opacity: 0;
+    //     @include translate(-50%,-50%);
+    //     background: #f0f0f0;
+    //     &.open{
+    //         opacity: 1;
+    //         visibility: visible;
+    //     }
+    // }
 }
 
 #contact{

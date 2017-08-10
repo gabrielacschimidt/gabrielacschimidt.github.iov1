@@ -27,7 +27,7 @@
     </head>
 
     <body>
-
+        <div class="overlay"></div>
         <header>
             <div class="container">
                 <h2><a href="#intro">GS</a></h2>
@@ -152,38 +152,75 @@
         <div id='work' class="basic-block">
             <div class="container">
                 <h2>My main projects</h2>
-                
-                <ul class="content-blocks">
-                    <li>
-                        <img src="img/scalon-home.png">
-                        <a href="#" onclick="openInfobox()">Scalon</a>
-                    </li>
-                    <div class="infobox">
+                <div class="work">
+                    <div class="work-info">
                         <h4>Scalon</h4>
                         <span>Mockup translation</span>
-                        <p>this is the content for scalon</p>
+                        <p>Ecommerce for clothing line. I coded the mockup design approved by the client on a Magento based solution. Most of my time was invested on developing its full screen menu and search, and the dynamic color change of the header based on the current topmost banner. The responsive version design choices were my responsibility.</p>
+                        <p> You can see the development version  
+                        <a href="scalon.bis2bis.com.br" target="_blank">here</a>.</p>
                     </div>
-                    <li>
-                        <img src="img/cookie-home.png">
-                        <a href="#" onclick="openInfobox()">Cookie Kids</a>
-                    </li>
-                    <div class="infobox">
+                    <div class="work-img">
+                        <img src="img/scalon-home.png" title="teste">
+                        <img src="img/scalon-home.png">
+                    </div>
+                </div>
+
+                <div class="work">
+                    <div class="work-info">
                         <h4>Cookie Kids</h4>
                         <span>Mockup translation</span>
-                        <p>this is the content for cookie</p>
+                        <p>Ecommerce for baby clothing. I coded the mockup design approved by the client on a Magento based solution. The responsive version design choices were my responsibility.</p>
+                        <p> Click <a href="www.cookiekids.com.br" target="_blank">here</a> to see the live version.</p>
                     </div>
-                    <li>
+                    <div class="work-img">
                         <img src="img/scalon-home.png">
-                        <a href="#" onclick="openInfobox()">Recipy</a>
-                    </li>
-                    <div class="infobox">
+                        <img src="img/scalon-home.png">
+                    </div>
+                </div>
+
+                <div class="work">
+                    <div class="work-info">
                         <h4>Recipy</h4>
                         <span>Prototype creation</span>
-                        <p>this is the content for recipy</p>
+                        <p>This is my final project of the Interaction Design specialization from UC San Diego I took through Coursera. Although it is far from perfect, I have learned a lot during its making. I went through several design steps, like ideation, need finding, interviewing users, usability analysis and A/B testing, in addition to thorough development planning.</p>
                         <p> You can read more about it 
-                        <a href="https://medium.com/@gabrielacschimidt/the-road-to-recipy-what-i-have-learned-on-interaction-design-807aa9fa518a" target="_blank">here</a>.</p>
+                        <a href="https://medium.com/@gabrielacschimidt/the-road-to-recipy-what-i-have-learned-on-interaction-design-807aa9fa518a" target="_blank">here</a> and check the interactive prototype <a href="https://invis.io/FWCKARHBJ" target="_blank">here</a>.</p>
                     </div>
-                </ul>
+                    <div class="work-img">
+                        <img src="img/scalon-home.png">
+                        <img src="img/scalon-home.png">
+                    </div>
+                </div>
+                
+                <!-- <ul class="content-blocks">
+                    <li>
+                        <a href="#" onclick="">Scalon</a>
+                        <div class="infobox">
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/cookie-home.png">
+                        <a href="#" onclick="">Cookie Kids</a>
+                        <div class="infobox">
+                            <h4>Cookie Kids</h4>
+                            <span>Mockup translation</span>
+                            <p>this is the content for cookie</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/scalon-home.png">
+                        <a href="#" onclick="">Recipy</a>
+                        <div class="infobox">
+                            <h4>Recipy</h4>
+                            <span>Prototype creation</span>
+                            <p>this is the content for recipy</p>
+                            <p> You can read more about it 
+                            <a href="https://medium.com/@gabrielacschimidt/the-road-to-recipy-what-i-have-learned-on-interaction-design-807aa9fa518a" target="_blank">here</a>.</p>
+                        </div>
+                    </li>
+                </ul> -->
             </div>
         </div>
 
@@ -292,10 +329,6 @@
             jQuery(this).find('label').addClass('active');
         }
     });
-
-    // var myHeader = new Header(address,addresswhite);
-    // myHeader.init();
-    // window.myHeader = myHeader;
 
   });
   function getCurrentScroll() {

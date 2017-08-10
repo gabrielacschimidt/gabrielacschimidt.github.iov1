@@ -3,6 +3,7 @@ $bege:#f2ddca;
 $laranja:#dc935e;
 $marrom:#8e838b;
 $azul:#d2eaec;
+$coral:#f58080;
 $text-base: darken($marrom,20%);
 $font-title: 'Slabo 27px', serif;
 $font-primary: 'Source Sans Pro', sans-serif;
@@ -192,7 +193,11 @@ button, .button{
     width:100% !important;
   }
 }
-
+@mixin vertically-aligned(){
+  display: inline-block;
+  vertical-align: middle;
+  float:none;
+}
 ::selection{
   background: #f58080;
   color: #fff;

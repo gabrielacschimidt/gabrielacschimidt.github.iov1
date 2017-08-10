@@ -1,31 +1,14 @@
-jQuery(window).ready(function (){
-  console.log('oi');
+// function Header() {
+//     self = this;
+//     self.mobileSize =  769;
+//     self.elementOpenBusca = jQuery('.open-search');
+//     self.elementOpenMenu = jQuery('.open-nav');
 
-  //header effect
-  // var shrinkHeader = 300;
-  // jQuery(window).scroll(function() {
-  //   var scroll = getCurrentScroll();
-  //     if ( scroll >= shrinkHeader ) {
-  //         jQuery('header').addClass('shrink');
-  //       }
-  //       else {
-  //         jQuery('header').removeClass('shrink');
-  //       }
-  // });
+//     self.init = function () {
+//         self.createModal();
+//     };
 
-  // study effects
-  if(getCurrentScroll() > 300){
-    jQuery('.content-blocks li').addClass('active');
-  }
-
-  jQuery(window).scroll(function(){
-    if(getCurrentScroll()>300){
-      jQuery('.content-blocks li').addClass('active');
-    }
-  });
-
-
-});
-function getCurrentScroll() {
-  return window.pageYOffset || document.documentElement.scrollTop;
-}
+//     self.createModal = function (){
+//         jQuery()
+//     }
+// }
