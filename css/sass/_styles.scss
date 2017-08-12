@@ -18,7 +18,7 @@ header{
     @include transition(height 0.3s);
 
     .container{
-        padding: 30px ;
+        display: table;
         @include mobileview{
             text-align: center;
         }
@@ -27,17 +27,23 @@ header{
 
     h2{
         display:inline-block;
-        vertical-align:middle;
+        float:left;
+        padding: 30px ;
     }
     nav{
         display:inline-block;
-        vertical-align:middle;
+        float:right;
+        padding: 30px ;
         a{
             margin: 0 20px;
             display:inline;
+            &:before{
+                margin-right: 5px !important;
+            }
             @include mobileview{
                 font-size: 0;
                 &:before{
+                    margin:0;
                     font-size:17px;
                 }
             }
